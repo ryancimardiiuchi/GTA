@@ -4,7 +4,8 @@
 # 🎮 Dev GTA
 
 <div align="center">
-  <img src="img/dev-gta.png" width="800" alt="Preview do Dev GTA">
+ <img width="800"  alt="WhatsApp Image 2026-10-18 at 23 57 55" src="https://github.com/user-attachments/assets/8be05ec5-d030-468f-9c86-e1abb46639ab" />
+
 </div>
 
 Projeto de seleção de personagens inspirado no universo GTA, desenvolvido para praticar desenvolvimento web, interatividade e integração com inteligência artificial. O usuário pode escolher personagens ou transformar sua própria foto em um personagem de videogame usando IA.
