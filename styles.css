@@ -1,0 +1,294 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Bangers", system-ui;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url("img/background2.jpg");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.nome {
+    color: #ff3cac;
+    font-size: 360px;
+    position: absolute;
+    bottom: 400px;
+    text-align: center;
+    width: 100%;
+    transition: color 0.25s ease;
+    pointer-events: none;
+}
+
+.personagem {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 700px;
+    max-width: 100%;
+    margin: auto;
+    object-fit: contain;
+    object-position: bottom;
+    transition: filter 0.25s ease;
+    pointer-events: none;
+}
+
+.personagem.em-destaque {
+    filter: drop-shadow(0 0 12px rgba(101, 255, 143, 0.85));
+}
+
+.textos {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    z-index: 3;
+}
+
+.etiqueta {
+    font-size: 26px;
+    color: #ffd319;
+}
+
+h1 {
+    font-size: 72px;
+    color: #ffffff;
+}
+
+.texto-apoio {
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.menu {
+    position: absolute;
+    bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    z-index: 5;
+}
+
+.avatar {
+    display: block;
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+    border: 2px solid #ffffff;
+    cursor: pointer;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+    background-color: #ffd319;
+}
+
+.avatar:hover,
+.avatar:focus-visible {
+    border-color: #65ff8f;
+    box-shadow: 0 0 15px rgba(101, 255, 143, 0.85);
+    transform: translateY(-3px);
+    outline: none;
+    background-color: #65ff8f ;
+}
+
+.voce {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    background: linear-gradient(145deg, #292d35, #111318);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.voce:hover,
+.voce:focus-within {
+    border-color: #65ff8f;
+    box-shadow: 0 0 15px rgba(101, 255, 143, 0.75);
+    transform: translateY(-3px);
+}
+
+.avatar-usuario {
+    position: absolute;
+    inset: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+}
+
+.voce.tem-foto .avatar-usuario {
+    display: block;
+}
+
+.camera {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    display: block;
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.8));
+    pointer-events: none;
+}
+
+.voce.tem-foto .camera {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.voce.tem-foto:hover .camera,
+.voce.tem-foto:focus-within .camera {
+    opacity: 1;
+}
+
+#fotoUsuario {
+    display: none;
+}
+
+
+@media (max-width: 900px) {
+    .nome {
+        top: 15%;
+        bottom: auto;
+        left: 0;
+        width: 100%;
+        padding: 0 10px;
+        font-size: clamp(75px, 17vw, 145px);
+        line-height: 1;
+        text-align: center;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .personagem {
+        height: 72vh;
+        max-width: 100%;
+        z-index: 2;
+    }
+
+    .textos {
+        bottom: 115px;
+        left: 20px;
+        max-width: 65%;
+        z-index: 3;
+    }
+
+    .etiqueta {
+        font-size: clamp(14px, 3vw, 22px);
+    }
+
+    h1 {
+        font-size: clamp(38px, 7vw, 58px);
+        line-height: 0.95;
+    }
+
+    .texto-apoio {
+        max-width: 300px;
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    .menu {
+        bottom: 20px;
+        gap: 12px;
+        z-index: 5;
+    }
+
+    .avatar,
+    .voce {
+        width: 54px;
+        height: 54px;
+    }
+}
+
+@media (max-width: 500px) {
+    .nome {
+        top: 12%;
+        font-size: clamp(65px, 17vw, 90px);
+        letter-spacing: 1px;
+    }
+
+    .personagem {
+        height: 65vh;
+        max-width: 100%;
+        bottom: 0;
+    }
+
+    .textos {
+        bottom: 100px;
+        left: 16px;
+        max-width: 58%;
+    }
+
+    .etiqueta {
+        font-size: 15px;
+        line-height: 1.2;
+    }
+
+    h1 {
+        font-size: clamp(34px, 9vw, 46px);
+        line-height: 0.95;
+    }
+
+    .texto-apoio {
+        font-size: 10px;
+        line-height: 1.35;
+    }
+
+    .menu {
+        bottom: 16px;
+        gap: 10px;
+    }
+
+    .avatar,
+    .voce {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+@media (max-height: 500px) and (max-width: 900px) {
+    .nome {
+        top: 5%;
+        font-size: clamp(55px, 12vw, 100px);
+    }
+
+    .personagem {
+        height: 85vh;
+    }
+
+    .textos {
+        bottom: 90px;
+    }
+
+    .menu {
+        bottom: 12px;
+    }
+}

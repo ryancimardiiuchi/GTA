@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Dev GTA</title>
+</head>
+<body>
+
+    <p class="nome">Lucia</p>
+
+    <img class="personagem" src="img/lucia.png" alt="Personagem">
+
+    <div class="textos">
+        <p class="etiqueta">Selecione o seu Personagem</p>
+        <h1>Não é só<br>um Jogo</h1>
+        <p class="texto-apoio">Escolha uma lenda de Dev City. Ou tire uma selfie e vire uma.</p>
+    </div>
+
+    <div class="menu">
+        <img
+            class="avatar"
+            src="img/lucia.png"
+            alt="Lucia"
+            tabindex="0"
+            onclick="escolherPersonagem('Lucia', 'img/lucia.png', '#ff3cac')"
+            onmouseenter="destacarPersonagem(this)"
+            onmouseleave="removerDestaque()"
+        >
+
+        <img
+            class="avatar"
+            src="img/jason.png"
+            alt="Jason"
+            tabindex="0"
+            onclick="escolherPersonagem('Jason', 'img/jason.png', '#00b2c9')"
+            onmouseenter="destacarPersonagem(this)"
+            onmouseleave="removerDestaque()"
+        >
+
+        <img
+            class="avatar"
+            src="img/cj.png"
+            alt="CJ"
+            tabindex="0"
+            onclick="escolherPersonagem('CJ', 'img/cj.png', '#7ed37e')"
+            onmouseenter="destacarPersonagem(this)"
+            onmouseleave="removerDestaque()"
+        >
+
+        <label class="voce" for="fotoUsuario" title="Transforme sua foto em personagem">
+            <img class="avatar-usuario" alt="Seu personagem">
+
+            <img class="camera" src="img/camera.png" alt="">
+
+            <input
+                id="fotoUsuario"
+                type="file"
+                accept="image/*"
+                onchange="lerFoto(this)"
+            >
+        </label>
+    </div>
+
+    <p class="mensagem" role="status" aria-live="polite"></p>
+
+    <script src="https://js.puter.com/v2/"></script>
+    <script src="scripts.js"></script>
+
+</body>
+</html>
