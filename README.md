@@ -1,4 +1,3 @@
-<img width="1341" height="652" alt="WhatsApp Image 2026-10-18 at 23 57 55" src="https://github.com/user-attachments/assets/8be05ec5-d030-468f-9c86-e1abb46639ab" />
 
 
 # 🎮 Dev GTA
