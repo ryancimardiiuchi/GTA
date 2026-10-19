@@ -30,6 +30,3 @@ Projeto de seleção de personagens inspirado no universo GTA, desenvolvido para
 2. Abra a pasta do projeto no VS Code.
 3. Execute o arquivo `index.html` com a extensão Live Server.
 
-## 👨‍💻 Desenvolvido com
-
-HTML5, CSS3, JavaScript e Puter.js.
