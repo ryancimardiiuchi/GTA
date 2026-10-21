@@ -30,3 +30,7 @@ Projeto de seleção de personagens inspirado no universo GTA, desenvolvido para
 2. Abra a pasta do projeto no VS Code.
 3. Execute o arquivo `index.html` com a extensão Live Server.
 
+   
+
+ <img width="1048" height="742" alt="Captura de tela 2026-10-20 211318" src="https://github.com/user-attachments/assets/9271a91f-6b36-4d24-ba3e-9474ea35f133" />
+
